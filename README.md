@@ -8,6 +8,13 @@ A city-scaled calendar-sharing scheme to enable
 
 using open standards with tools intended to be installed at multiple nodes for flexible and broad utility.
 
+## Project Policies
+
+Unless otherwise and specifically indicated with replacement files in this repository, this project will adhere to the default Code for Vegas Foundation policies for Code of Conduct and Contributing, found at
+
+* [Code of Conduct - Code for Vegas Foundation](https://github.com/CodeForVegas/.github/blob/main/CODE_OF_CONDUCT.md)
+* [Contributing to this Project - Code for Vegas Foundation](https://github.com/CodeForVegas/.github/blob/main/CONTRIBUTING.md)
+
 ## Workflow
 
 The calendar server is intended to be deployed at one more more nodes to act as sharing hubs for various calendars. Perhaps an NNTP analogy could be made, to enable multiple nodes to sync as peers to spread social/public calendars across multiple locations. At the same time, multiple clients can sync from one or more nodes. This enables one user, for example, to sync their own calendar with 1 or more nodes that are aggregating event calendar of interest, even if the nodes are not actively synchronizing as peers.
