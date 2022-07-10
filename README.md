@@ -35,7 +35,7 @@ In all cases, the overarchiving goals are to enable
 
 The Calendar Server project, owned by Apple Computer and pubilshed under a liberal open source license (see Reference below), is one starting point for the SmartCalender-Server, thus python is also a starting language and, with a sufficiently large set of options for working with vcalendar and other related data and protocols already available.
 
-The Calendar Server project made use of the Twisted asynchronous web framework to handle requests. It will be possible to use Twisted, or Tornado, or perhaps AWS Lamda functions or other to handle large traffic bursts, to be expected during calendar syncs across multiple endpoints. Apple is no longer supporting the Calendar Server project, it has been archived, and is long out of date concerning python versions, etc, so useful for ideas, perhaps, and documentation references.
+The Calendar Server project made use of the Twisted asynchronous web framework to handle requests. It will be possible to use Twisted, or Tornado, or perhaps AWS Lamda functions or other to handle large traffic bursts, to be expected during calendar syncs across multiple endpoints. Apple is no longer supporting the Calendar Server project, it has been archived, and is long out of date concerning python versions, etc, so useful for ideas, perhaps, and documentation references. Linked in References section below.
 
 As well there is a more current project, Radicale (see References below) which offers some interesting ideas, also written in python.
 
@@ -43,7 +43,7 @@ Both of these projects are interesting, but should only be taken as inspiration 
 
 The latest available version of Python that may be used in these scenarios (3.9+) without support for any previous or legacy (2.7 or older) python versions.
 
-Ideally the core services will be deployable as a Serverless Lambda (or other) function, behind an async server, behind something like Django, or perhaps exposed as a server callable behind a Node or GoLang web server.
+Ideally the core services will be deployable as a Serverless Lambda (or other) function, behind an async server, behind something like Django, or perhaps exposed as a server callable behind a Node or GoLang web server. It is possible that the architecture of this implementation will be a candidate for refactoring into another language entirely.
 
 ## Audiences
 
@@ -77,3 +77,7 @@ Ideally the core services will be deployable as a Serverless Lambda (or other) f
 <https://radicale.org/v3.html>
 
 <https://developers.google.com/calendar/caldav/v2/guide>
+
+<https://github.com/apple/ccs-calendarserver>
+
+<https://devguide.calconnect.org/>
