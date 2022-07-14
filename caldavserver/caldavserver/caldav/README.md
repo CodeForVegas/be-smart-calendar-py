@@ -15,6 +15,12 @@
 // You should have received a copy of the GNU General Public License
 // along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-# Server parts of CalDAV Server
+# Broker parts of CalDAV Server
 
-Interfaces for stand-alone HTTP, WSGI, and command line, among others.
+Deal with incoming and outgoing CalDAV transaction data, storage, etc.
+
+## References
+
+[Python vcalendar and vcard library](http://eventable.github.io/vobject/)
+
+[Radicale Server Implementation (useful broker implementation)](https://github.com/Kozea/Radicale)

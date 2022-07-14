@@ -15,3 +15,6 @@
 // You should have received a copy of the GNU General Public License
 // along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
+# Server parts of CalDAV Server
+
+Interfaces for stand-alone HTTP, WSGI, command line, maybe others?
