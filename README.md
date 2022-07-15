@@ -45,6 +45,8 @@ The latest available version of Python that may be used in these scenarios (3.9+
 
 Ideally the core services will be deployable as a Serverless Lambda (or other) function, behind an async server, behind something like Django, or perhaps exposed as a server callable behind a Node or GoLang web server. It is possible that the architecture of this implementation will be a candidate for refactoring into another language entirely.
 
+There is a javascript representation of iCalendar data structures out there, it could be on The List to support, especially if Smart Calendar begins down a path of extension.
+
 ## Audiences
 
 * A Developer must be able to use and build python-based modules and services, with instructions to do so found with the project source code.
@@ -69,6 +71,8 @@ Ideally the core services will be deployable as a Serverless Lambda (or other) f
 ## References
 
 <https://www.ietf.org/rfc/rfc5545.txt>
+
+<https://www.rfc-editor.org/rfc/rfc8984.html>
 
 <https://icalendar.org>
 
