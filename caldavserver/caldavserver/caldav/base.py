@@ -20,5 +20,5 @@ import logging
 class BaseCalDAVHandler(object):
 
 	def run(self):
-		logging.debug("{}.run", self.__class__.__name__)
+		logging.debug(f"{self.__class__.__name__}.run")
 
