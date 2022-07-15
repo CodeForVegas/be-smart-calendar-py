@@ -17,7 +17,7 @@
 
 # Broker parts of CalDAV Server
 
-Deal with incoming and outgoing CalDAV transaction data, storage, etc.
+Deal with incoming and outgoing CalDAV transaction data, passing (brokering) the payloads to and from the app layer (or service, or... ?)
 
 ## References
 
