@@ -15,8 +15,14 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
+
 from caldavserver.caldav.base import BaseCalDAVHandler
 
 def test_InstantiateBaseCalDAVHandler():
 	BaseCalDAVHandler_instance = BaseCalDAVHandler()
 	assert BaseCalDAVHandler_instance is not None
+
+def test_TestValidRequest():
+	req = None
+	BaseCalDAVHandler_instance = BaseCalDAVHandler()
+	assert BaseCalDAVHandler_instance.parse_request(req).status() is not None

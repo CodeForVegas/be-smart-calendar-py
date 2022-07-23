@@ -16,9 +16,29 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
+logger = logging.getLogger(__name__)
 
 class BaseCalDAVHandler(object):
 
+	status = None
+
+	def __init__(self, req=None):
+		if req:
+			self.parse_request(req)
+
 	def run(self):
-		logging.debug(f"{self.__class__.__name__}.run")
+		logger.debug(f"{self.__class__.__name__}.run")
+		return self
+
+	def status(self, item=None):
+		return self.status
+
+	def parse_request(self, req=None):
+		return self
+
+	def parse_path(self):
+		return self
+
+	def check_authorization(self):
+		return self
 
