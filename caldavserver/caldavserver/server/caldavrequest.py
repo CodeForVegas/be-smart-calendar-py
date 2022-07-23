@@ -18,6 +18,7 @@
 import logging
 from http.server import BaseHTTPRequestHandler
 
+logger = logging.getLogger(__name__)
 
 class HandleCalDAVRequest(BaseHTTPRequestHandler):
 
