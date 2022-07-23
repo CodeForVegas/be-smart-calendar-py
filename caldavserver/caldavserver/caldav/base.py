@@ -23,7 +23,8 @@ class BaseCalDAVHandler(object):
 	request_valid = False
 	root_path = None
 	resource_path = None
-
+	request_body = None
+	response_body = None
 
 	def __init__(self, req=None):
 		self.parse_request(req)
@@ -36,7 +37,9 @@ class BaseCalDAVHandler(object):
 		state = {
 			'request_valid' : self.request_valid,
 			'root_path' : self.root_path,
-			'resource_path' : self.resource_path
+			'resource_path' : self.resource_path,
+			'request_body' : self.request_body,
+			'response_body' : self.response_body
 		}
 
 		if item:
@@ -46,7 +49,7 @@ class BaseCalDAVHandler(object):
 	def parse_request(self, req):
 		self.request_valid = False
 		if req:
-			self.path = self.parse_path(req.get('path'))
+			self.parse_path(req.get('path'))
 			self.request_valid = True
 		return self
 
