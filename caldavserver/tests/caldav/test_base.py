@@ -23,7 +23,7 @@ def test_InstantiateBaseCalDAVHandler():
 	assert BaseCalDAVHandler_instance is not None
 
 def test_TestValidRequest():
-	req = None
+	req = dict(path='/test/path')
 	BaseCalDAVHandler_instance = BaseCalDAVHandler()
 	BaseCalDAVHandler_instance.parse_request(req)
-	assert BaseCalDAVHandler_instance.status('request') is None
+	assert BaseCalDAVHandler_instance.status('request_valid') is True

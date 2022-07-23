@@ -20,27 +20,38 @@ logger = logging.getLogger(__name__)
 
 class BaseCalDAVHandler(object):
 
-	state = dict(request=None)
+	request_valid = False
+	root_path = None
+	resource_path = None
+
 
 	def __init__(self, req=None):
-		if req:
-			self.parse_request(req)
+		self.parse_request(req)
 
 	def run(self):
 		logger.debug(f"{self.__class__.__name__}.run")
 		return self
 
 	def status(self, item=None):
-		if item:
-			return self.state.get(item)
-		return self.state
+		state = {
+			'request_valid' : self.request_valid,
+			'root_path' : self.root_path,
+			'resource_path' : self.resource_path
+		}
 
-	def parse_request(self, req=None):
-		if req is None:
-			self.state['request'] = None
+		if item:
+			return state.get(item)
+		return state
+
+	def parse_request(self, req):
+		self.request_valid = False
+		if req:
+			self.path = self.parse_path(req.get('path'))
+			self.request_valid = True
 		return self
 
-	def parse_path(self):
+	def parse_path(self, path):
+		self.resource_path = path
 		return self
 
 	def check_authorization(self):
