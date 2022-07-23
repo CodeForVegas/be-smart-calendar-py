@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 class BaseCalDAVHandler(object):
 
-	status = None
+	state = dict(request=None)
 
 	def __init__(self, req=None):
 		if req:
@@ -31,9 +31,13 @@ class BaseCalDAVHandler(object):
 		return self
 
 	def status(self, item=None):
-		return self.status
+		if item:
+			return self.state.get(item)
+		return self.state
 
 	def parse_request(self, req=None):
+		if req is None:
+			self.state['request'] = None
 		return self
 
 	def parse_path(self):
