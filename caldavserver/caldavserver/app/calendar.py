@@ -15,12 +15,20 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-import vobject
+#import vobject
+from datetime import datetime
+from pydantic import BaseModel
 
-class Calendar(object):
+class CalendarData(BaseModel):
+	id: int = None
+	guid: str = None
+	relcalid: str = None
+	prodid: str = " PRODID:-//Code for Vegas Foundation//NONSGML Smart Calendar//EN"
+	calname: str = None
+	caldesc: str = None
+	calscale: str = "GREGORIAN"
+	published_ttl: int = 3600
 
-	def __init__(self):
-		pass
 
 	def inputVCalender(self, vcaltext):
 		pass
@@ -28,3 +36,6 @@ class Calendar(object):
 	def outputVCalender(self):
 		pass
 
+
+class Calendar(object):
+	pass

@@ -15,19 +15,43 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-import vobject
+from datetime import datetime, timedelta
+from dateutil import rrule
+from pydantic import BaseModel
 
-from caldavserver.app.calendar import CalendarData, Calendar
+class ToDoData(BaseModel):
+	id: int = None
+	dtstamp: datetime
+	dtstart: datetime
+	due: timedelta
+	todo_class: str
+	completed: bool
+	created: datetime
+	description: str
+	last_mod: datetime
+	location: str
+	organizer_id: int
+	percent: int
+	priority: int
+	recur_id: int
+	seq: int
+	status: str
+	summary: str
+	url: str
+	todo_rrule: str #TODO: Correct type for rrule
+	attach: list
+	attendee: list
+	categories: list
+	comment: list
+	contact: list
+	exdate: datetime
+	rstatus: list
+	related: list
+	resources: list
+	rdate: list
+	x_prop: dict
+	iana_prop: dict
 
-
-def test_instantiateCalendarData():
-	calendardata_instance = CalendarData()
-	assert calendardata_instance is not None
-
-def test_instantiateCalendar():
-	calendar_instance = Calendar()
-	assert calendar_instance is not None
-
-def test_parseValidVCalendar():
-	calendardata_instance = CalendarData()
+class ToDo(object):
+	pass
 

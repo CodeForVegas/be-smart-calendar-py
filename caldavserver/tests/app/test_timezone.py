@@ -15,19 +15,12 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-import vobject
+from caldavserver.app.timezone import TimezoneData, Timezone
 
-from caldavserver.app.calendar import CalendarData, Calendar
+def test_instantiateTimezoneData():
+	timezonedata_instance = TimezoneData()
+	assert timezonedata_instance is not None
 
-
-def test_instantiateCalendarData():
-	calendardata_instance = CalendarData()
-	assert calendardata_instance is not None
-
-def test_instantiateCalendar():
-	calendar_instance = Calendar()
-	assert calendar_instance is not None
-
-def test_parseValidVCalendar():
-	calendardata_instance = CalendarData()
-
+def test_instantiateTimezone():
+	timezone_instance = Timezone()
+	assert timezone_instance is not None

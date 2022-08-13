@@ -15,19 +15,11 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-import vobject
+from pydantic import BaseModel
 
-from caldavserver.app.calendar import CalendarData, Calendar
+class JournalData(BaseModel):
+	id: int = None
 
 
-def test_instantiateCalendarData():
-	calendardata_instance = CalendarData()
-	assert calendardata_instance is not None
-
-def test_instantiateCalendar():
-	calendar_instance = Calendar()
-	assert calendar_instance is not None
-
-def test_parseValidVCalendar():
-	calendardata_instance = CalendarData()
-
+class Journal(object):
+	pass
