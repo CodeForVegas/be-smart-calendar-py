@@ -17,9 +17,10 @@
 
 from datetime import datetime, timedelta
 from dateutil import rrule
+from dataclasses import dataclass
 from pydantic import BaseModel
 
-class ToDoData(BaseModel):
+class ToDoForeignData(BaseModel):
 	id: int = None
 	dtstamp: datetime
 	dtstart: datetime
@@ -52,6 +53,9 @@ class ToDoData(BaseModel):
 	x_prop: dict
 	iana_prop: dict
 
+@dataclass
+class ToDoData:
+	pass
 class ToDo(object):
 	pass
 

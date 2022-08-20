@@ -16,9 +16,10 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from datetime import datetime
+from dataclasses import dataclass
 from pydantic import BaseModel
 
-class FreeBusyData(BaseModel):
+class FreeBusyForeignData(BaseModel):
 	id: int = None
 	dtstamp: datetime
 	dtstart: datetime
@@ -33,6 +34,9 @@ class FreeBusyData(BaseModel):
 	x_prop: dict
 	iana_prop: dict
 
+@dataclass
+class FreeBusyData:
+	pass
 
 class FreeBusy(object):
 	pass

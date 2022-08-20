@@ -15,7 +15,12 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.app.event import EventData, Event
+from caldavserver.app.event import EventForeignData, EventData, Event
+
+
+def test_instantiateEventForeignData():
+	eventforeigndata_instance = EventForeignData()
+	assert eventforeigndata_instance is not None
 
 def test_instantiateEventData():
 	eventdata_instance = EventData()

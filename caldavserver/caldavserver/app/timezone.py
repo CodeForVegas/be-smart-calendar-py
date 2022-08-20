@@ -17,9 +17,10 @@
 
 from dateutil.tz import tzical
 from datetime import datetime
+from dataclasses import dataclass
 from pydantic import BaseModel
 
-class TimezoneData(BaseModel):
+class TimezoneForeignData(BaseModel):
 	id: int = None
 	last_mod: datetime
 	tzurl: str
@@ -27,6 +28,9 @@ class TimezoneData(BaseModel):
 	x_prop: dict
 	iana_prop: dict
 
+@dataclass
+class TimezoneData:
+	pass
 
 class Timezone(object):
 	pass

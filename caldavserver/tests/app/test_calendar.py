@@ -17,8 +17,12 @@
 
 import vobject
 
-from caldavserver.app.calendar import CalendarData, Calendar
+from caldavserver.app.calendar import CalendarForeignData, CalendarData, Calendar
 
+
+def test_instantiateCalendarForeignData():
+	calendarforeigndata_instance = CalendarForeignData()
+	assert calendarforeigndata_instance is not None
 
 def test_instantiateCalendarData():
 	calendardata_instance = CalendarData()

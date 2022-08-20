@@ -17,9 +17,10 @@
 
 #import vobject
 from datetime import datetime
+from dataclasses import dataclass
 from pydantic import BaseModel
 
-class CalendarData(BaseModel):
+class CalendarForeignData(BaseModel):
 	id: int = None
 	guid: str = None
 	relcalid: str = None
@@ -30,12 +31,9 @@ class CalendarData(BaseModel):
 	published_ttl: int = 3600
 
 
-	def inputVCalender(self, vcaltext):
-		pass
-
-	def outputVCalender(self):
-		pass
-
+@dataclass
+class CalendarData:
+	pass
 
 class Calendar(object):
 	pass

@@ -24,6 +24,7 @@ This is the actual implementation of the Smart Calendar server-side functionalit
 The app component of this project *may* move out to its own project repository as a stand-alone code block that could be used in a microservice deployment or something along those lines.
 
 ## Architecture Notes
+
 ### ForeignData Classes
 
 The overhead of pydantic will be applied to incoming foreign data from remote servers or clients submitting items directly to a Smart Calendar.

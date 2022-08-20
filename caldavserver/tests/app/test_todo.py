@@ -15,7 +15,11 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.app.todo import ToDoData, ToDo
+from caldavserver.app.todo import ToDoForeignData, ToDoData, ToDo
+
+def test_instantiateToDoForeignData():
+	todoforeigndata_instance = ToDoForeignData()
+	assert todoforeigndata_instance is not None
 
 def test_instantiateToDoData():
 	tododata_instance = ToDoData()

@@ -16,10 +16,16 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from datetime import datetime
+from dataclasses import dataclass
 from pydantic import BaseModel
 
-class AlarmData(BaseModel):
+class AlarmForeignData(BaseModel):
 	id: int = None
+
+
+@dataclass
+class AlarmData:
+	pass
 
 class Alarm(object):
 	pass

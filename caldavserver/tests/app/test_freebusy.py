@@ -15,8 +15,12 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.app.freebusy import FreeBusyData, FreeBusy
+from caldavserver.app.freebusy import FreeBusyForeignData, FreeBusyData, FreeBusy
 
+
+def test_instantiateFreeBusyForeignData():
+	freebusyforeigndata_instance = FreeBusyForeignData()
+	assert freebusyforeigndata_instance is not None
 
 def test_instantiateFreeBusyData():
 	freebusydata_instance = FreeBusyData()

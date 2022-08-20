@@ -17,9 +17,10 @@
 
 from datetime import datetime, timedelta
 from dateutil.rrule import rrule
+from dataclasses import dataclass
 from pydantic import BaseModel
 
-class EventData(BaseModel):
+class EventForeignData(BaseModel):
 	id: int = None
 	dtstamp: datetime
 	dtstart: datetime
@@ -38,6 +39,10 @@ class EventData(BaseModel):
 	transp: str
 	url: str
 	recur_id: int
+
+@dataclass
+class EventData:
+	pass
 
 class Event(object):
 	pass

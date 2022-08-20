@@ -15,15 +15,17 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
+
 from dataclasses import dataclass
 from pydantic import BaseModel
 
-class JournalForeignData(BaseModel):
+class UserForeignData(BaseModel):
 	id: int = None
 
+
 @dataclass
-class JournalData:
+class UserData:
 	pass
 
-class Journal(object):
+class User(object):
 	pass

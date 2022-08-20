@@ -15,8 +15,12 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.app.alarm import AlarmData, Alarm
+from caldavserver.app.alarm import AlarmForeignData, AlarmData, Alarm
 
+
+def test_instantiateAlarmForeignData():
+	alarmforeigndata_instance = AlarmForeignData()
+	assert alarmforeigndata_instance is not None
 
 def test_instantiateAlarmData():
 	alarmdata_instance = AlarmData()
