@@ -17,9 +17,9 @@
  along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
-# Broker parts of CalDAV Server
+# CalDAV Broker
 
-Deal with incoming and outgoing CalDAV transaction data, passing (brokering) the payloads to and from the app layer (or service, or... ?)
+Deal with incoming and outgoing CalDAV transaction data through the outside server, passing (brokering) the payloads to and from the app layer (or service, or... ?)
 
 ## References
 
