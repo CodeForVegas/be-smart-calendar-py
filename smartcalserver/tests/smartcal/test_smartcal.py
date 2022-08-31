@@ -15,8 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-import smartcalserver
-
+import smartcalserver.smartcal
 
 def test_version():
-    assert smartcalserver.__version__ == '0.1.0'
+	assert smartcalserver.smartcal.__version__ == '0.1.0'
