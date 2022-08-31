@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.mkcalendar import HandleMkCalendar
+from smartcalserver.caldav.mkcalendar import HandleMkCalendar
 
 def test_InstantiateHandleMkCalendar():
 	HandleMkCalendar_instance = HandleMkCalendar()

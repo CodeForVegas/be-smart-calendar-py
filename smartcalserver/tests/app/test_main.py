@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.app.main import CalMain
+from smartcalserver.app.main import CalMain
 
 
 def test_instantiateCalMain():

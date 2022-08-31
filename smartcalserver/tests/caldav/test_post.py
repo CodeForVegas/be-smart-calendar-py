@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.post import HandlePost
+from smartcalserver.caldav.post import HandlePost
 
 def test_InstantiateHandlePost():
 	HandlePost_instance = HandlePost()

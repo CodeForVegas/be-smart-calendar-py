@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.app.user import UserForeignData, UserData, User
+from smartcalserver.app.user import UserForeignData, UserData, User
 
 def test_instantiateUserForeignData():
 	userforeigndata_instance = UserForeignData()

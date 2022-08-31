@@ -16,7 +16,7 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from http.server import HTTPServer
-from caldavserver.server.caldavrequest import HandleCalDAVRequest
+from smartcalserver.server.caldavrequest import HandleCalDAVRequest
 
 def test_InstantiateHandleCalDAVRequest():
 	host = ""

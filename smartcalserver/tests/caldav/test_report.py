@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.report import HandleReport
+from smartcalserver.caldav.report import HandleReport
 
 def test_InstantiateHandleReport():
 	HandleReport_instance = HandleReport()

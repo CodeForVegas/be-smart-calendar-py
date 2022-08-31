@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.options import HandleOptions
+from smartcalserver.caldav.options import HandleOptions
 
 def test_InstantiateHandleOptions():
 	HandleOptions_instance = HandleOptions()

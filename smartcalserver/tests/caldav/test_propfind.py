@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.propfind import HandlePropFind
+from smartcalserver.caldav.propfind import HandlePropFind
 
 def test_InstantiateHandlePropFind():
 	HandlePropFind_instance = HandlePropFind()

@@ -18,7 +18,7 @@
 import logging
 
 from http.server import HTTPServer
-from caldavserver.server.caldavrequest import HandleCalDAVRequest
+from smartcalserver.server.caldavrequest import HandleCalDAVRequest
 
 logger = logging.getLogger(__name__)
 

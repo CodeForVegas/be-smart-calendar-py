@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.put import HandlePut
+from smartcalserver.caldav.put import HandlePut
 
 def test_InstantiateHandlePut():
 	HandlePut_instance = HandlePut()

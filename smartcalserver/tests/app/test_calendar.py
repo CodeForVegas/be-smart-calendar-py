@@ -17,7 +17,7 @@
 
 import vobject
 
-from caldavserver.app.calendar import CalendarForeignData, CalendarData, Calendar
+from smartcalserver.app.calendar import CalendarForeignData, CalendarData, Calendar
 
 
 def test_instantiateCalendarForeignData():

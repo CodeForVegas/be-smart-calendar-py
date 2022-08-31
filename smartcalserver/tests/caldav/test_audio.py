@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.audio import HandleAudio
+from smartcalserver.caldav.audio import HandleAudio
 
 def test_InstantiateHandleAudio():
 	HandleAudio_instance = HandleAudio()

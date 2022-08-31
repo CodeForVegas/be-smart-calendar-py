@@ -16,7 +16,7 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from caldavserver.caldav.base import BaseCalDAVHandler
+from smartcalserver.caldav.base import BaseCalDAVHandler
 
 def test_InstantiateBaseCalDAVHandler():
 	BaseCalDAVHandler_instance = BaseCalDAVHandler()

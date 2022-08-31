@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.get import HandleGet
+from smartcalserver.caldav.get import HandleGet
 
 def test_InstantiateHandleGet():
 	HandleGet_instance = HandleGet()

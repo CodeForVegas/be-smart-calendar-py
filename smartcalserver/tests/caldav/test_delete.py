@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from caldavserver.caldav.delete import HandleDelete
+from smartcalserver.caldav.delete import HandleDelete
 
 def test_InstantiateHandleDelete():
 	HandleDelete_instance = HandleDelete()
