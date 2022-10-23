@@ -23,11 +23,11 @@ logger = logging.getLogger(__name__)
 class HandleCalDAVRequest(BaseHTTPRequestHandler):
 
 	def do_HEAD(self):
-		logging.debug("do_HEAD")
+		logger.debug("do_HEAD")
 		pass
 
 	def do_GET(self):
-		logging.debug("do_GET")
+		logger.debug("do_GET")
 		# This is a test block early in development, will be converted to real code
 		# and this block could be turned into in-band error/status output along the way
 		message = '\n'.join([
@@ -52,41 +52,41 @@ class HandleCalDAVRequest(BaseHTTPRequestHandler):
 		self.wfile.write(bytes(message, 'UTF-8'))
 
 	def do_PUT(self):
-		logging.debug("do_PUT")
+		logger.debug("do_PUT")
 		pass
 
 	def do_POST(self):
-		logging.debug("do_POST")
+		logger.debug("do_POST")
 		pass
 
 	def do_MKCALENDAR(self):
-		logging.debug("do_MKCALENDAR")
+		logger.debug("do_MKCALENDAR")
 		pass
 
 	def do_MKCOL(self):
-		logging.debug("do_MKCOL")
+		logger.debug("do_MKCOL")
 		pass
 
 	def do_DELETE(self):
-		logging.debug("do_DELETE")
+		logger.debug("do_DELETE")
 		pass
 
 	def do_OPTIONS(self):
-		logging.debug("do_OPTIONS")
+		logger.debug("do_OPTIONS")
 		pass
 
 	def do_PROPFIND(self):
-		logging.debug("do_PROPFIND")
+		logger.debug("do_PROPFIND")
 		pass
 
 	def do_PROPPATCH(self):
-		logging.debug("do_PROPPATCH")
+		logger.debug("do_PROPPATCH")
 		pass
 
 	def do_REPORT(self):
-		logging.debug("do_REPORT")
+		logger.debug("do_REPORT")
 		pass
 
 	def do_AUDIO(self):
-		logging.debug("do_AUDIO")
+		logger.debug("do_AUDIO")
 		pass
