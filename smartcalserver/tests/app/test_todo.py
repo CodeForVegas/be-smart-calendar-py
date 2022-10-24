@@ -16,10 +16,11 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from smartcalserver.app.todo import ToDoForeignData, ToDoData, ToDo
+import pytest
 
-def test_instantiateToDoForeignData():
-	todoforeigndata_instance = ToDoForeignData()
-	assert todoforeigndata_instance is not None
+def test_instantiateInvalidToDoForeignData():
+	with pytest.raises(Exception):
+		todoforeigndata_instance = ToDoForeignData()
 
 def test_instantiateToDoData():
 	tododata_instance = ToDoData()

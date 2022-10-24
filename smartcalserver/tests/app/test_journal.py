@@ -16,12 +16,11 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from smartcalserver.app.journal import JournalForeignData, JournalData, Journal
+import pytest
 
-
-def test_instantiateJournalForeignData():
-	journalforeigndata_instance = JournalForeignData()
-	assert journalforeigndata_instance is not None
-
+def test_instantiateInvalidJournalForeignData():
+	with pytest.raises(Exception):
+		journalforeigndata_instance = JournalForeignData()
 
 def test_instantiateJournalData():
 	journaldata_instance = JournalData()

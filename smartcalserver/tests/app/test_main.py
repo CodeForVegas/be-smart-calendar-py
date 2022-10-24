@@ -16,7 +16,7 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from smartcalserver.app.main import CalMain
-
+import pytest
 
 def test_instantiateCalMain():
 	calmain_instance = CalMain()

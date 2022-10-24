@@ -16,11 +16,11 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from smartcalserver.app.alarm import AlarmForeignData, AlarmData, Alarm
+import pytest
 
-
-def test_instantiateAlarmForeignData():
-	alarmforeigndata_instance = AlarmForeignData()
-	assert alarmforeigndata_instance is not None
+def test_instantiateInvalidAlarmForeignData():
+	with pytest.raises(Exception):
+		alarmforeigndata_instance = AlarmForeignData()
 
 def test_instantiateAlarmData():
 	alarmdata_instance = AlarmData()

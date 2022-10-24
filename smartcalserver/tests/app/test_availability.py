@@ -16,11 +16,11 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from smartcalserver.app.availability import AvailabilityForeignData, AvailabilityData, Availability
+import pytest
 
-
-def test_instantiateAvailabilityForeignData():
-	availabilityforeigndata_instance = AvailabilityForeignData()
-	assert availabilityforeigndata_instance is not None
+def test_instantiateInvalidAvailabilityForeignData():
+	with pytest.raises(Exception):
+		availabilityforeigndata_instance = AvailabilityForeignData()
 
 def test_instantiateAvailabilityData():
 	availabilitydata_instance = AvailabilityData()

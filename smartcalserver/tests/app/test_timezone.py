@@ -16,10 +16,11 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from smartcalserver.app.timezone import TimezoneForeignData, TimezoneData, Timezone
+import pytest
 
-def test_instantiateTimezoneForeignData():
-	timezoneforeigndata_instance = TimezoneForeignData()
-	assert timezoneforeigndata_instance is not None
+def test_instantiateInvalidTimezoneForeignData():
+	with pytest.raises(Exception):
+		timezoneforeigndata_instance = TimezoneForeignData()
 
 def test_instantiateTimezoneData():
 	timezonedata_instance = TimezoneData()

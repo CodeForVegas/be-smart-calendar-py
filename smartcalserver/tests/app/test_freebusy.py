@@ -16,11 +16,11 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from smartcalserver.app.freebusy import FreeBusyForeignData, FreeBusyData, FreeBusy
+import pytest
 
-
-def test_instantiateFreeBusyForeignData():
-	freebusyforeigndata_instance = FreeBusyForeignData()
-	assert freebusyforeigndata_instance is not None
+def test_instantiateInvalidFreeBusyForeignData():
+	with pytest.raises(Exception):
+		freebusyforeigndata_instance = FreeBusyForeignData()
 
 def test_instantiateFreeBusyData():
 	freebusydata_instance = FreeBusyData()

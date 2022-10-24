@@ -16,11 +16,11 @@
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
 from smartcalserver.app.event import EventForeignData, EventData, Event
+import pytest
 
-
-def test_instantiateEventForeignData():
-	eventforeigndata_instance = EventForeignData()
-	assert eventforeigndata_instance is not None
+def test_instantiateInvalidEventForeignData():
+	with pytest.raises(Exception):
+		eventforeigndata_instance = EventForeignData()
 
 def test_instantiateEventData():
 	eventdata_instance = EventData()

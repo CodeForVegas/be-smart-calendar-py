@@ -15,14 +15,12 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-import vobject
-
 from smartcalserver.app.calendar import CalendarForeignData, CalendarData, Calendar
+import pytest
 
-
-def test_instantiateCalendarForeignData():
-	calendarforeigndata_instance = CalendarForeignData()
-	assert calendarforeigndata_instance is not None
+def test_instantiateInvalidCalendarForeignData():
+	with pytest.raises(Exception):
+		calendarforeigndata_instance = CalendarForeignData()
 
 def test_instantiateCalendarData():
 	calendardata_instance = CalendarData()
