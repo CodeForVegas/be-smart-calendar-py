@@ -15,13 +15,22 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from datetime import datetime
 from dataclasses import dataclass
 from pydantic import BaseModel
 
-class AlarmForeignData(BaseModel):
-	id: int
+import datetime
 
+class AlarmForeignData(BaseModel):
+	action: str
+	trigger: str
+	description: str | None
+	summary: str | None
+	duration: datetime.timedelta | None
+	repeat: str | None
+	attach: str | list[str] | None
+	attendee: str | list[str] | None
+	x_prop: str | list[str] | None
+	iana_prop: str | list[str] | None
 
 @dataclass
 class AlarmData:

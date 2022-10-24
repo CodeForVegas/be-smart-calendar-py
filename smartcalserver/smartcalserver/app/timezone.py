@@ -15,18 +15,19 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from dateutil.tz import tzical
-from datetime import datetime
 from dataclasses import dataclass
 from pydantic import BaseModel
 
+import datetime
+from dateutil.tz import tzical
+
 class TimezoneForeignData(BaseModel):
-	id: int
-	last_mod: datetime
-	tzurl: str
-	info: str
-	x_prop: dict
-	iana_prop: dict
+	tzid: str
+	last_mod: datetime.datetime | None
+	tzurl: str | None
+	info: str | list[str] | None
+	x_prop: str | list[str] | None
+	iana_prop: str | list[str] | None
 
 @dataclass
 class TimezoneData:

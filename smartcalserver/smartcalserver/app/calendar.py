@@ -15,19 +15,21 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-#import vobject
-from datetime import datetime
 from dataclasses import dataclass
 from pydantic import BaseModel
 
+
 class CalendarForeignData(BaseModel):
-	id: int
-	guid: str = None
+
 	relcalid: str = None
 	prodid: str = " PRODID:-//Code for Vegas Foundation//NONSGML Smart Calendar//EN"
+	version: str
+	calscale: str | None
+	method: str | None
+	x_prop: str | list[str] | None
+	iana_prop: str | list[str] | None
 	calname: str = None
 	caldesc: str = None
-	calscale: str = "GREGORIAN"
 	published_ttl: int = 3600
 
 

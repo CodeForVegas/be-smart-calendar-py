@@ -15,43 +15,47 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from datetime import datetime, timedelta
-from dateutil import rrule
 from dataclasses import dataclass
 from pydantic import BaseModel
 
+import datetime
+
 class ToDoForeignData(BaseModel):
-	id: int
-	dtstamp: datetime
-	dtstart: datetime
-	due: timedelta
-	todo_class: str
-	completed: bool
-	created: datetime
-	description: str
-	last_mod: datetime
-	location: str
-	organizer_id: int
-	percent: int
-	priority: int
-	recur_id: int
-	seq: int
-	status: str
-	summary: str
-	url: str
-	todo_rrule: str #TODO: Correct type for rrule
-	attach: list
-	attendee: list
-	categories: list
-	comment: list
-	contact: list
-	exdate: datetime
-	rstatus: list
-	related: list
-	resources: list
-	rdate: list
-	x_prop: dict
-	iana_prop: dict
+	uid: str
+	dtstamp: datetime.datetime
+
+	vclass: str | None
+	completed: str | None
+	created: datetime.datetime | None
+	description: str | None
+	dtstart: datetime.datetime | None
+	geo: str | None
+	last_mod: datetime.datetime | None
+	location: str | None
+	organizer: str | None
+	percent: float | None
+	priority: int | None
+	recurid: str | None
+	seq: int | None
+	status: str | None
+	summary: str | None
+	url: str | None
+	rrule: str | None
+	due: datetime.datetime | None
+	duration: datetime.timedelta | None
+
+	attach: str | list[str] | None
+	attendee: str | list[str] | None
+	categories: str | list[str] | None
+	comment: str | list[str] | None
+	contact: str | list[str] | None
+	exdate: datetime.datetime | list[datetime.datetime] | None
+	rstatus: str | list[str] | None
+	related: str | list[str] | None
+	resources: str | list[str] | None
+	rdate: datetime.datetime | list[datetime.datetime] | None
+	x_prop: str | list[str] | None
+	iana_prop: str | list[str] | None
 
 @dataclass
 class ToDoData:

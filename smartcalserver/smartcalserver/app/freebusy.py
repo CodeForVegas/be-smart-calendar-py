@@ -15,24 +15,26 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from datetime import datetime
 from dataclasses import dataclass
 from pydantic import BaseModel
 
+import datetime
+
 class FreeBusyForeignData(BaseModel):
-	id: int
-	dtstamp: datetime
-	dtstart: datetime
-	dtend: datetime
-	contact: str
-	organizer: str
-	url: str
-	attendee: str
-	comment: str
-	freebusy: str
-	rstatus: str
-	x_prop: dict
-	iana_prop: dict
+	uid: str
+	dtstamp: datetime.datetime
+	contact: str | None
+	dtstart: datetime.datetime | None
+	dtend: datetime.datetime | None
+	organizer: str | None
+	url: str | None
+
+	attendee: str | list[str] | None
+	comment: str | list[str] | None
+	freebusy: str | list[str] | None
+	rstatus: str | list[str] | None
+	x_prop: str | list[str] | None
+	iana_prop: str | list[str] | None
 
 @dataclass
 class FreeBusyData:
