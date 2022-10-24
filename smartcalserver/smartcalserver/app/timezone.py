@@ -21,7 +21,7 @@ from dataclasses import dataclass
 from pydantic import BaseModel
 
 class TimezoneForeignData(BaseModel):
-	id: int = None
+	id: int
 	last_mod: datetime
 	tzurl: str
 	info: str

@@ -21,7 +21,7 @@ from dataclasses import dataclass
 from pydantic import BaseModel
 
 class ToDoForeignData(BaseModel):
-	id: int = None
+	id: int
 	dtstamp: datetime
 	dtstart: datetime
 	due: timedelta

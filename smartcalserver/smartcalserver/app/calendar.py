@@ -21,7 +21,7 @@ from dataclasses import dataclass
 from pydantic import BaseModel
 
 class CalendarForeignData(BaseModel):
-	id: int = None
+	id: int
 	guid: str = None
 	relcalid: str = None
 	prodid: str = " PRODID:-//Code for Vegas Foundation//NONSGML Smart Calendar//EN"

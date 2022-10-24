@@ -20,7 +20,7 @@ from dataclasses import dataclass
 from pydantic import BaseModel
 
 class AlarmForeignData(BaseModel):
-	id: int = None
+	id: int
 
 
 @dataclass

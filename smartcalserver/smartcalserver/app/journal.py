@@ -19,7 +19,7 @@ from dataclasses import dataclass
 from pydantic import BaseModel
 
 class JournalForeignData(BaseModel):
-	id: int = None
+	id: int
 
 @dataclass
 class JournalData:

@@ -21,7 +21,7 @@ from dataclasses import dataclass
 from pydantic import BaseModel
 
 class EventForeignData(BaseModel):
-	id: int = None
+	id: int
 	dtstamp: datetime
 	dtstart: datetime
 	dtend: datetime
