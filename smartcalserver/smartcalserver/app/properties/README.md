@@ -71,10 +71,12 @@ We can then serialize the internal python datetime representation back to the iC
 '19980119T070000'
 ```
 
-Thus incoming iCalendar types are parsed and marshalled as needed, to internal types (python types are reasonable for persistence and serialization, if we venture into polyglot data-sharing of internal structures we want to make sure we aren't introducing data errors with unexpected type coercion, etc).
+Thus incoming iCalendar types are parsed and marshalled as needed, to internal types (python types are reasonable for persistence and serialization, if we venture into polyglot data-sharing of internal structures we want to make sure we aren't introducing data errors with unexpected type coercion, etc) while internal types may have other data for internal use and feature implementation and to augment the alternate use cases of calendar data (though our Smart Calendar APIs perhaps).
 
 ## External References
 
 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
 [RFC 3339](https://www.rfc-editor.org/rfc/rfc3339)
+
 [Compare ISO 8601 and RFC 3339](https://ijmacd.github.io/rfc3339-iso8601/)
