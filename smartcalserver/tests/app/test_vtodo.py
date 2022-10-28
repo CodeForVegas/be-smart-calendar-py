@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from smartcalserver.app.todo import ToDoForeignData, ToDoData, ToDo
+from smartcalserver.app.vtodo import ToDoForeignData, ToDoData, ToDo
 import pytest
 
 def test_instantiateInvalidToDoForeignData():

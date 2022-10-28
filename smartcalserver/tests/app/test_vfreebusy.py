@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from smartcalserver.app.freebusy import FreeBusyForeignData, FreeBusyData, FreeBusy
+from smartcalserver.app.vfreebusy import FreeBusyForeignData, FreeBusyData, FreeBusy
 import pytest
 
 def test_instantiateInvalidFreeBusyForeignData():

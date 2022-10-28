@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from smartcalserver.app.availability import AvailabilityForeignData, AvailabilityData, Availability
+from smartcalserver.app.vavailability import AvailabilityForeignData, AvailabilityData, Availability
 import pytest
 
 def test_instantiateInvalidAvailabilityForeignData():

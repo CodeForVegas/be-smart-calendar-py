@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with be-smart-calendar-server-py.  If not, see <http://www.gnu.org/licenses/>.
 
-from smartcalserver.app.alarm import AlarmForeignData, AlarmData, Alarm
+from smartcalserver.app.valarm import AlarmForeignData, AlarmData, Alarm
 import pytest
 
 def test_instantiateInvalidAlarmForeignData():
