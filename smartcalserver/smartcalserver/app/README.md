@@ -41,7 +41,7 @@ Pydantic classes will be used to build internal dataclass models of Smart Calend
 
 ### Dataclass Classes
 
-Handling of data internally occurs through python dataclass objects, which saves some boilerplate trouble and gives us some nice side effects with this standard python3.7+ feature. If we need to deploy an internal-only version of the calendar app module we could strip out the foreigndata interfaces and move the defensive coding with parsing and checking to an outer layer.
+Handling of data internally occurs through python dataclass objects, which saves some boilerplate trouble and gives us some nice side effects with this standard python3.7+ feature. If we need to deploy an internal-only version of the calendar app module we could strip out the foreign data interfaces and move the defensive coding with parsing and checking to an outer layer.
 
 There **may** be some utility found in using the attrs library instead of dataclasses, but we began with dataclasses for internal objects committed to data stores and passed around for internal processing.
 
@@ -49,8 +49,18 @@ Whatever the actual implementation, the internal objects should be named and str
 
 ## References
 
+<!-- TODO: Collect references in one doc and link them where appropriate closer to the relevant info per doc? -->
+
 <https://pydantic-docs.helpmanual.io/>
 
 <https://docs.python.org/3/library/dataclasses.html>
 
 <https://www.attrs.org/en/stable/>
+
+<https://www.ietf.org/rfc/rfc5545.txt>
+
+<https://www.rfc-editor.org/rfc/rfc8984.html>
+
+<https://github.com/apple/ccs-calendarserver>
+
+<https://devguide.calconnect.org/>
