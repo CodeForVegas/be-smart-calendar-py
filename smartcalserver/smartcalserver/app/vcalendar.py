@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Code for Vegas Foundation
+# Copyright (C) 2022 Innovate for Vegas Foundation
 # 
 # This file is part of be-smart-calendar-server-py.
 # 
@@ -22,7 +22,7 @@ from pydantic import BaseModel
 class CalendarForeignData(BaseModel):
 
 	relcalid: str = None
-	prodid: str = " PRODID:-//Code for Vegas Foundation//NONSGML Smart Calendar//EN"
+	prodid: str = " PRODID:-//Innovate for Vegas Foundation//NONSGML Smart Calendar//EN"
 	version: str
 	calscale: str | None
 	method: str | None
