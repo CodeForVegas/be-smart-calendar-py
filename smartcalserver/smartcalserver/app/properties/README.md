@@ -33,13 +33,13 @@ Parameter elements have defined iCalendar types per the RFCs and will be encapsu
 
 ## Parsing Incoming Properties
 
-The complexities of the iCalendar Stream are its many RFCs and changes and room for implementation deviations, and in the numer of Property definitions in the various RFCs.
+The complexities of the iCalendar Stream are its many RFCs and changes and room for implementation deviations, and in the number of Property definitions in the various RFCs.
 
 Our defensive parsing scheme will treat incoming Foreign Data as potentially-erroneous and will attempt to validate the incoming data Properties and Parameters according to the specifications (the relevant RFCs) and to common use, though not necessarily in that order.
 
 It will be important to adapt the validation process to real-world scenarios to make a working iCalendar stream parser for the same of the Calendar Server, but there is a fine line between broken and passable error.
 
-Properties defined herein are intended to be general for incoming Properties and Parameters, with additional validation per implenmentation within a Component class (especially within a Pydantic class, which is intended to be more pedantic about the incoming data).
+Properties defined herein are intended to be general for incoming Properties and Parameters, with additional validation per implementation within a Component class (especially within a Pydantic class, which is intended to be more pedantic about the incoming data).
 
 However, it is also important to accept erroneous data wherever possible and store and transmit it as-was-received per the various iCalendar RFCs. The idea is to be as tolerant as possible of the various interpretations of the standards without imposing any fixes or corrections up to the point where the iCalendar stream is functional, if not quite within spec.
 
