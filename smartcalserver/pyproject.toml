@@ -7,7 +7,7 @@ authors = ["DanHugoDanHugo <dhugo@reallycool.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 vobject = "^0.9.6"
-pydantic = "^1.9.1"
+pydantic = "^1.10.13"
 
 [tool.poetry.dev-dependencies]
 pytest = ">7.1"
